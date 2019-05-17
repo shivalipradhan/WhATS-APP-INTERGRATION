@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_margin="8dp"
+    app:cardElevation="5dp"
+    card_view:cardCornerRadius="4dp">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/productImage"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_margin="12dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@tools:sample/avatars[12]" />
+
+        <TextView
+            android:id="@+id/tvProductName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:maxLines="2"
+            android:text="Item"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/productImage"
+            app:layout_constraintTop_toTopOf="@+id/productImage" />
+
+        <TextView
+            android:id="@+id/tvOrderQty"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="Quantity : 4"
+            app:layout_constraintEnd_toStartOf="@+id/tvProductPrice"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/productImage"
+            app:layout_constraintTop_toBottomOf="@+id/tvGroupName" />
+
+        <TextView
+            android:id="@+id/tvProductPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/roboto"
+            android:gravity="center"
+            android:text="$ 20.00"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/btnCartPlus"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tvOrderQty"
+            app:layout_constraintTop_toTopOf="@+id/tvOrderQty" />
+
+        <TextView
+            android:id="@+id/tvGroupName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="8dp"
+            android:text="Group"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/productImage"
+            app:layout_constraintTop_toBottomOf="@+id/tvProductName" />
+
+        <ImageButton
+            android:id="@+id/btnCartPlus"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            android:scaleType="fitXY"
+            android:layout_marginBottom="8dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_add_circle"
+            android:tint="@drawable/icon_selector"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tvOrderQty"
+            app:layout_constraintTop_toBottomOf="@+id/tvOrderQty" />
+
+        <ImageButton
+            android:id="@+id/btnCartMinus"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="12dp"
+            android:scaleType="fitXY"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_remove_circle"
+            android:tint="@drawable/icon_selector"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btnCartPlus"
+            app:layout_constraintTop_toBottomOf="@+id/tvOrderQty" />
+
+    </android.support.constraint.ConstraintLayout>
+</android.support.v7.widget.CardView>
